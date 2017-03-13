@@ -34,7 +34,7 @@ Structure of input string as follows:
 python3 run.py '{your_custom_design_chess_board}' {0 or 1}
 ```
 
-![alt text](http://imgur.com/a/qoN2U "Main Board")
+![Screenshot]\(http://imgur.com/a/qoN2U)
 
 For example; To display initial start of a chess game (picture above) with white player having the turn run the following command(1):
 
@@ -64,7 +64,7 @@ For the initial start command(1) output will be as follows
 
 
 ♙ ♙ ♙ ♙ ♙ ♙ ♙ ♙
-♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖ 
+♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖
 
 PAWN at a2
 Pa3 Pa4
@@ -96,4 +96,36 @@ Na3 Nc3
 NIGHT at g1
 Nf3 Nh3
 ----
+```
+
+## About this project
+
+Displayed moves are possible moves in the chess board. In these possible moves, check, castling and "en passant" is ignored.
+
+
+## Several Test Samples
+
+[Double Horse](https://lichess.org/editor/8/8/8/2N2N2/8/8/8/8_w_-_-)
+```
+python3 run.py '8/8/8/2N2N2/8/8/8/8 w - -' 1
+```
+***
+[Double King](https://lichess.org/editor/8/8/8/1K4k1/8/8/8/8_w_-_-)
+```
+python3 run.py '8/8/8/1K4k1/8/8/8/8 w - -' 1
+```
+***
+[Rook on Each Corner](https://lichess.org/editor/r6R/8/8/8/8/8/8/R6r_w_-_-)
+```
+python3 run.py 'r6R/8/8/8/8/8/8/R6r w - -' 1
+```
+***
+[Ruy Lopez](https://lichess.org/editor/r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R_b_KQkq_-)
+```
+python3 run.py 'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq -' 1
+```
+***
+[Eight Queen Problem Solution 1](https://lichess.org/editor/3Q4/6Q1/2Q5/7Q/1Q6/4Q3/Q7/5Q2_w_-_-)
+```
+python3 run.py '3Q4/6Q1/2Q5/7Q/1Q6/4Q3/Q7/5Q2 w - -' 1
 ```
