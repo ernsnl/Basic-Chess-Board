@@ -21,7 +21,6 @@ def main(argv):
         else:
             color_value = int(argv[1])
             board = Board(parse_lichess(argv[0]))
-            print(board)
             board.possible_moves(Color.WHITE if color_value == 1 else Color.BLACK)
 
 if __name__ == "__main__":

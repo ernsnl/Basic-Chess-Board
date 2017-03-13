@@ -19,10 +19,14 @@ class Board():
 
     def __str__(self):
         print_str = ''
+        row_count = 8
         for row in self.board_matrix:
+            print_str += str(row_count)
+            row_count -= 1
             for col in row:
                 print_str += str(col)
             print_str += '\n'
+        print_str += ' A B C D E F G H'
         return print_str
 
     def create_board(self):
@@ -56,26 +60,27 @@ class Board():
         for row in self.board_matrix:
             for col in row:
                 if not col.empty and col.color == color:
+                    moves = []                    
                     if col.piece == Piece.BISHOP:
-                        print_possible_moves(
-                            col, self.get_diagonal_move(col))
+                        moves = self.get_diagonal_move(col)
                     if col.piece == Piece.ROOK:
-                        print_possible_moves(
-                            col, self.get_vertical_move(col))
+                        moves = self.get_vertical_move(col)
                     if col.piece == Piece.QUEEN:
                         moves = self.get_vertical_move(col)
                         moves.extend(self.get_diagonal_move(col))
-                        print_possible_moves(col, moves)
                     if col.piece == Piece.KING:
                         moves = self.get_vertical_move(col,1)
                         moves.extend(self.get_diagonal_move(col,1))
-                        print_possible_moves(col, moves)
                     if col.piece == Piece.PAWN:
-                        print_possible_moves(
-                            col, self.get_pawn_move(col))
+                        moves = self.get_pawn_move(col)
                     if col.piece == Piece.NIGHT:
-                        print_possible_moves(
-                            col, self.get_knight_move(col))
+                        moves = self.get_knight_move(col)
+
+                    if len(moves) > 0:
+                        print(self)
+                        print_possible_moves(col, moves)
+                        input("Press Enter to continue...")
+                        print(chr(27) + "[2J")
 
     def get_diagonal_move(self, piece_info, length=-1):
         """Returns all the possible diagonal moves that can be played by using that piece

@@ -71,33 +71,8 @@ For the initial start command(1) output will be as follows
 PAWN at a2
 Pa3 Pa4
 ----
-PAWN at b2
-Pb3 Pb4
-----
-PAWN at c2
-Pc3 Pc4
-----
-PAWN at d2
-Pd3 Pd4
-----
-PAWN at e2
-Pe3 Pe4
-----
-PAWN at f2
-Pf3 Pf4
-----
-PAWN at g2
-Pg3 Pg4
-----
-PAWN at h2
-Ph3 Ph4
-----
-NIGHT at b1
-Na3 Nc3
-----
-NIGHT at g1
-Nf3 Nh3
-----
+
+{And More}
 ```
 
 ## About this project
