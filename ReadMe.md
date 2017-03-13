@@ -34,7 +34,7 @@ Structure of input string as follows:
 python3 run.py '{your_custom_design_chess_board}' {0 or 1}
 ```
 
-![Screenshot]\(http://imgur.com/a/qoN2U)
+![Screenshot](http://imgur.com/a/qoN2U)
 
 For example; To display initial start of a chess game (picture above) with white player having the turn run the following command(1):
 
