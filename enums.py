@@ -11,5 +11,5 @@ class Piece(Enum):
     QUEEN = 9813
     ROOK = 9814
     BISHOP = 9815
-    KNIGHT = 9816
+    NIGHT = 9816
     PAWN = 9817
