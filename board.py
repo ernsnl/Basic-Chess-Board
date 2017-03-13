@@ -60,7 +60,7 @@ class Board():
         for row in self.board_matrix:
             for col in row:
                 if not col.empty and col.color == color:
-                    moves = []                    
+                    moves = []
                     if col.piece == Piece.BISHOP:
                         moves = self.get_diagonal_move(col)
                     if col.piece == Piece.ROOK:
@@ -210,13 +210,13 @@ class Board():
             movement_row = mov[0] + row
             movement_col = mov[1] + col
             if movement_row > 7 or movement_row < 0:
-                del mov
+                continue
             elif movement_col > 7 or movement_col < 0:
-                del mov
+                continue
             else:
                 move_it = self.general_possible_move(movement_row, movement_col, piece_info)
                 if move_it is None:
-                    del mov
+                    continue
                 else:
                     possible_moves.append(move_it)
         return possible_moves
